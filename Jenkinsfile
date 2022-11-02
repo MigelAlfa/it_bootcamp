@@ -31,20 +31,21 @@ pipeline {
           script {
             dockerImage = docker.build registry + ":$BUILD_NUMBER" , "."
             //dockerImage = docker.build registry + ":$BUILD_NUMBER" , "--network host ."
+            //dockerImage = docker.build registry + ":latest" , "."
           }
         }
       }
-      stage('Test image') {
+
+    stage('Test image') {
       steps{
-        sh "docker run -i $registry:latest"
+        sh "docker run -i $registry:$BUILD_NUMBER"
       }
     }
-    
+
       stage('Deploy Image') {
         steps{
           script {
             docker.withRegistry( '', registryCredential ) {
-  //          docker.withRegistry( 'https://jfrog.it-academy.by/', registryCredential ) {
               dockerImage.push()
             }
           }

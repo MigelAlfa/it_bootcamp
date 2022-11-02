@@ -1,16 +1,14 @@
 FROM alpine:latest
 
-LABEL maintainer="migelalfa@gmail.com"
+MAINTAINER migelalfa
 
+ENV PYTHONUNBUFFERED=1
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+RUN python3 -m ensurepip
+RUN pip3 install --no-cache --upgrade pip setuptools
 
-RUN apk update \
-    && apk upgrade \
-    && apk add --no-cache python3 \
-    && apk add --no-cache py3-pip \
-    && mkdir /www
-
-COPY apitest.py /www/apitest.py
-
-CMD ["python3", "/www/apitest.py"]
-
-EXPOSE 8080
+RUN mkdir ./app
+WORKDIR ./app
+COPY ./app/* .
+EXPOSE 8090
+CMD ["python3", "listener.py"]
