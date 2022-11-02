@@ -2,7 +2,7 @@ import socket
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server.bind(('', 8080))
+server.bind(('', 9999))
 server.listen()
 while True:
         client_socket, addr = server.accept()
