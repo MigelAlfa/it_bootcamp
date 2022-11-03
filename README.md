@@ -4,10 +4,10 @@ https://hub.docker.com/repository/docker/migelalfa/it_boot
 ```
 
 # Pipeline 
-Pre-Prod (https://github.com/MigelAlfa/Learn_repo/blob/main/Pre-prod.png)
+Pre-Prod (https://github.com/MigelAlfa/it_bootcamp/blob/main/Pre-prod.png)
 
-Finish (https://github.com/MigelAlfa/Learn_repo/blob/main/finish.png)
+Finish (https://github.com/MigelAlfa/it_bootcamp/blob/main/finish.png)
 
-Blue Ocean (https://github.com/MigelAlfa/Learn_repo/blob/main/Blue%20Ocean.png)
+Blue Ocean (https://github.com/MigelAlfa/it_bootcamp/blob/main/Blue%20Ocean.png)
 
-slack Notification (https://github.com/MigelAlfa/Learn_repo/blob/main/slack.png)
+slack Notification (https://github.com/MigelAlfa/it_bootcamp/blob/main/slack.png)
