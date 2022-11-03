@@ -13,4 +13,4 @@ COPY apitest.py /www/apitest.py
 
 CMD ["python3", "/www/apitest.py"]
 
-EXPOSE 8080
+EXPOSE 9999
